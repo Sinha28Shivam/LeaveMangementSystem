@@ -1,0 +1,56 @@
+<mvc:View controllerName="leavemgmtsyst.controller.View1"
+   xmlns:mvc="sap.ui.core.mvc"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:t="sap.ui.table"
+  xmlns:core="sap.ui.core"
+  xmlns="sap.m"
+>
+  <App id="_IDGenApp1">
+    <pages>
+      <Page id="_IDGenPage1" title="My Leave">
+        <content>
+          <l:VerticalLayout id="_IDGenVerticalLayout1">
+            <f:SimpleForm id="leaveForm" editable="true">
+              <f:content>
+                <Label id="_IDGenLabel1" text="Select your leave dates"/>
+                <DatePicker id="startDate" value="{path: 'startDate'}"/>
+                <DatePicker id="endDate" value="{path: 'endDate'}"/>
+                <Label id="_IDGenLabel2" text="Leave Type"/>
+                <Select id="leaveType" items="{path: 'leaveTypes'}">
+                  <items>
+                    <core:Item id="_IDGenItem1" key="Annual Leave" text="Annual Leave"/>
+                    <core:Item id="_IDGenItem2" key="Compensatory Off" text="Compensatory Off"/>
+                  </items>
+                </Select>
+                <Button id="applyButton" text="Apply" press="onApplyPress"/>
+              </f:content>
+            </f:SimpleForm>
+            <t:Table id="leaveTable" items="{path: 'leaveHistory'}">
+              <t:columns>
+                <t:Column id="dateColumn" hAlign="Center">
+                  <Label id="_IDGenLabel3" text="Date"/>
+                </t:Column>
+                <t:Column id="leaveTypeColumn" hAlign="Center">
+                  <Label id="_IDGenLabel4" text="Leave Type"/>
+                </t:Column>
+                <t:Column id="statusColumn" hAlign="Center">
+                  <Label id="_IDGenLabel5" text="Status"/>
+                </t:Column>
+              </t:columns>
+              <t:items>
+                <t:ColumnListItem id="_IDGenColumnListItem1">
+                  <cells>
+                    <Text id="_IDGenText1" text="{path: 'date'}"/>
+                    <Text id="_IDGenText2" text="{path: 'leaveType'}"/>
+                    <Text id="_IDGenText3" text="{path: 'status'}"/>
+                  </cells>
+                </t:ColumnListItem>
+              </t:items>
+            </t:Table>
+          </l:VerticalLayout>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>
