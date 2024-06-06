@@ -1,33 +1,78 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-  ], 
-  
-  function(Controller, JSONModel) {
-    "use strict";
-   
+    "sap/ui/core/Fragment",
+    "sap/ui/unified/DateRange"
+], 
 
-        return Controller.extend("leavemgmtsyst.controller.View1", {
-            onInit: function() {
-                var oModel = new JSONModel({
-                  startDate: "",
-                  endDate: "",
-                  leaveTypes: [
-                    { key: "Annual Leave", text: "Annual Leave" },
-                    { key: "Compensatory Off", text: "Compensatory Off" }
-                  ],
-                  leaveHistory: [
-                    { date: "2024-06-17", leaveType: "Annual Leave", status: "AVAILABLE" },
-                    { date: "2024-06-22", leaveType: "Restricted Holiday", status: "AVAILABLE" },
-                    // Add more leave history data here
-                  ]
+function (Controller, Fragment, DateRange) {
+    "use strict";
+ 
+    return Controller.extend("leavemgmtsyst.controller.View1", {
+        handleSelect: function (oEvent) {
+            // Handle calendar date selection if needed
+        },
+ 
+        onSubmitLeave: function () {
+            var oView = this.getView();
+ 
+            // Check if the dialog already exists
+            if (!this.byId("idDialog")) {
+                console.log("Dialog does not exist. Loading fragment...");
+                // Load the dialog fragment
+                Fragment.load({
+                    id: oView.getId(),
+                    name: "leavemgmtsyst.view.DialogFrag",
+                    type: "XML",
+                    controller: this
+                }).then(function (oDialog) {
+                    console.log("Fragment loaded successfully.");
+                    // Add dialog as a dependent of the view and open it
+                    oView.addDependent(oDialog);
+                    oDialog.open();
+                }).catch(function (oError) {
+                    console.error("Error loading fragment:", oError);
                 });
-                this.getView().setModel(oModel);
-              },
-           
-              onApplyPress: function() {
-                // TO DO: Implement leave application logic here
-                console.log("Leave application submitted");
-              }
-            });
-          });
+            } else {
+                console.log("Dialog exists. Opening dialog...");
+                // Open the existing dialog
+                this.byId("idDialog").open();
+            }
+        },
+ 
+        onCloseDialog: function () {
+            console.log("Closing dialog.");
+            // Close the dialog
+            this.byId("idDialog").close();
+        },
+ 
+        onSubmitDialog: function () {
+            var oView = this.getView();
+            var oDialog = this.byId("idDialog");
+            var oCalendar = oView.byId("calendar");
+            var sDescription = this.byId("descriptionInput").getValue();
+ 
+            // Get the selected dates from the calendar
+            var aSelectedDates = oCalendar.getSelectedDates();
+            var oStartDate = null;
+            var oEndDate = null;
+ 
+            if (aSelectedDates.length > 0) {
+                oStartDate = aSelectedDates[0].getStartDate();
+                oEndDate = aSelectedDates[0].getEndDate();
+            }
+ 
+            // Create the JSON object
+            var oLeaveData = {
+                from: oStartDate,
+                to: oEndDate,
+                description: sDescription
+            };
+ 
+            // Log the JSON object (or handle as needed)
+            console.log("Leave data:", JSON.stringify(oLeaveData));
+ 
+            // Close the dialog
+            oDialog.close();
+        }
+    });
+});
