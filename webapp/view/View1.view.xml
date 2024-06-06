@@ -6,10 +6,32 @@
     xmlns:core="sap.ui.core"
     xmlns:unified="sap.ui.unified">
  
-    <Page id="IDGenPage1" title="HCLTech | My Leave">
+    <Page id="IDGenPage1">
+    <customHeader>
+    <Bar id="_IDGenBar1">
+    <contentLeft>
+    <Button id="_IDGenBut1" icon="My_images/hcltech.svg"/>
+    <Text id="text1" text="My Leave"/>
+    </contentLeft>
+
+     <contentRight>
+    <Button id="_IDGenBut2" icon="sap-icon://employee" tooltip="Employee Profile" class="CustomIcon"/>
+    </contentRight>
+    <contentRight>
+    <Button id="_IDGenBut3" icon="sap-icon://settings" tooltip="settings" class="CustomIcon"/>
+    </contentRight>
+    <contentRight>
+    <Button id="_IDGenBut4" icon="sap-icon://unfavorite" class="CustomIcon"/>
+    </contentRight>
+    </Bar>
+    </customHeader>
+
+
+
+
         <content>
-            <l:VerticalLayout id="IDGenVerticalLayout1" width="50%">
-                <f:SimpleForm id="IDGenSimpleForm1">
+            <l:VerticalLayout id="IDGenVerticalLayout1" class="centerContent">
+                <f:SimpleForm id="IDGenSimpleForm1" layout="ResponsiveGridLayout">
                     <unified:Calendar
                         id="calendar"
                         showWeekNumbers="true"
@@ -21,9 +43,42 @@
                         </unified:selectedDates>
                     </unified:Calendar>
                 </f:SimpleForm>
-                <Button id="IDGenButton1" text="Submit" type="Success" press="onSubmitLeave" />
-                <core:Fragment id="idXMLFrag1" fragmentName="leavemgmtsyst.view.DialogFrag" type="XML" />
+                <Button id="IDGenButton1" text="Apply" press="onSubmitLeave" />
+               
             </l:VerticalLayout>
         </content>
+
+
+
+
+
+
+
+
+
+
+        <!-- This is a footer part -->
+         <footer>
+        <Toolbar id="_IDGenToolbar1" height="50px" style="Standard">
+        <content>
+        <VBox id="_IDGenHBox1" >
+        <HBox id="_IDGenHBox2">
+        <Text id="text" text="Best viewed on the latest versions of MS Edge, Chrome or Safari." />
+       
+        </HBox>
+
+         <!-- <Bar id="_IDGenBar2">
+        <contentRight>
+        <Image id="_IDGenImage678" src="My_images/hcl.svg" />
+        </contentRight>
+        </Bar> -->
+  </VBox>
+
+        </content>
+
+        </Toolbar>
+
+
+        </footer>
     </Page>
 </mvc:View>

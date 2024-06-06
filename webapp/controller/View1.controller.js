@@ -1,10 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/Fragment",
-    "sap/ui/unified/DateRange"
+    "sap/ui/unified/DateRange",
+    "sap/ui/model/json/JSONModel"
 ], 
 
-function (Controller, Fragment, DateRange) {
+function (Controller, Fragment, DateRange, JSONModel) {
     "use strict";
  
     return Controller.extend("leavemgmtsyst.controller.View1", {
@@ -54,23 +55,30 @@ function (Controller, Fragment, DateRange) {
             // Get the selected dates from the calendar
             var aSelectedDates = oCalendar.getSelectedDates();
             var oStartDate = null;
-            var oEndDate = null;
+var oEndDate = null;
  
-            if (aSelectedDates.length > 0) {
-                oStartDate = aSelectedDates[0].getStartDate();
-                oEndDate = aSelectedDates[0].getEndDate();
-            }
+if (aSelectedDates.length > 0) {
+  oStartDate = aSelectedDates[0].getStartDate();
+  if (aSelectedDates.length > 1) {
+    oEndDate = aSelectedDates[aSelectedDates.length - 1].getEndDate();
+  }
+}
  
-            // Create the JSON object
-            var oLeaveData = {
-                from: oStartDate,
-                to: oEndDate,
-                description: sDescription
-            };
+// Create the JSON object with checks for null values
+var oLeaveData = {
+  from: oStartDate ? oStartDate.toString() : "", // Handle potential null startDate
+  to: oEndDate ? oEndDate.toString() : "",   // Handle potential null endDate
+  description: this.byId("descriptionInput").getValue()
+};
  
-            // Log the JSON object (or handle as needed)
-            console.log("Leave data:", JSON.stringify(oLeaveData));
+// Log the JSON object or handle as needed
+console.log(JSON.stringify(oLeaveData));
  
+
+// reset the dialog box dataa
+this.byId("descriptionInput").setValue("");
+
+
             // Close the dialog
             oDialog.close();
         }

@@ -1,1 +1,54 @@
-/* Enter your custom styles here */
+.sapUiSizeCompact .sapMPageHeader .sapMIBar, .sapUiSizeCompact .sapMPageFooter .sapMIBar, .sapUiSizeCompact .sapMPageFooter .sapMIBar, .sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarPH, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarPH {
+    height: 3rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background: transparent linear-gradient(90deg, #5F1EBE 0%, #2874F0 67%, #0F5FDC 100%) 0% 0% no-repeat;
+    
+}
+
+.sapMBtnInner .sapMBtnIcon.sapMImg {
+    max-width: 100px;
+    background-size: contain;
+}
+.sapMBar .sapMText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    font-size: 25px;
+    color: #fff;
+    padding: 3px 16px 4px;
+    text-decoration: none;
+    border-left: 0.5px solid rgba(255, 255, 255, 0.6);
+}
+
+.centerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.CustomIcon{
+    background-color: rgb(249, 249, 249);
+    
+    
+}
+.CustomIcon .sapUiIcon{
+    color: rgb(189, 159, 159);
+    font-size: 1.3rem;
+}
+
+.sapMText {
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: pre-line;
+    word-wrap: break-word;
+    cursor: text;
+    font-size: 0.875rem;
+    font-family: "72", "72full", Arial, Helvetica, sans-serif;
+    line-height: normal;
+    color: #fff;
+}
