@@ -26,13 +26,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 150%;
+    width: 150%;
     flex-direction: column;
+
 }
 
 .CustomIcon{
-    background-color: rgb(249, 249, 249);
+    background-color: #fff;
     
     
 }
@@ -51,4 +52,11 @@
     font-family: "72", "72full", Arial, Helvetica, sans-serif;
     line-height: normal;
     color: #fff;
+}
+.text1{
+        color: black;
+        font-size: x-large;
+}
+.sapUiSizeCompact .sapMBtnInner .sapMBtnIcon.sapMImg {
+    max-height: 1.8rem;
 }

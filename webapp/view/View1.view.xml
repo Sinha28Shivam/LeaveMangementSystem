@@ -1,9 +1,11 @@
-<mvc:View controllerName="leavemgmtsyst.controller.View1"
+<mvc:View  controllerName="leavemgmtsyst.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
+    xmlns:panel="sap.f.SidePanel"
+    xmlns:f2="sap.f"
     xmlns:unified="sap.ui.unified">
  
     <Page id="IDGenPage1">
@@ -14,14 +16,28 @@
     <Text id="text1" text="My Leave"/>
     </contentLeft>
 
-     <contentRight>
-    <Button id="_IDGenBut2" icon="sap-icon://employee" tooltip="Employee Profile" class="CustomIcon"/>
-    </contentRight>
-    <contentRight>
-    <Button id="_IDGenBut3" icon="sap-icon://settings" tooltip="settings" class="CustomIcon"/>
-    </contentRight>
-    <contentRight>
-    <Button id="_IDGenBut4" icon="sap-icon://unfavorite" class="CustomIcon"/>
+     <contentRight>    
+    <Button id="_IDGenBut3" icon="My_images/apple.png" tooltip="appStore"/>
+     <Image id="image2" src="My_images/line.png" height="50px" width="10px"/>
+    <Button id="_IDGenBut4" icon="My_images/smile.png" />
+    <Button id="_IDGenBut5" icon="My_images/questionMark.png" tooltip="Employee Profile"/>
+    <Button id="_IDGenBut6" icon="My_images/setting.png" tooltip="settings"/>
+        <MenuButton id="_IDGenBut7" icon="My_images/whitebread.png" tooltip="Menu" type="Transparent" >
+        <menu>
+        <Menu id="_IDGenMenu1"  visible="true">
+        <MenuItem id="_IDGenMenuItem1" text="Profile" />
+        <MenuItem id="_IDGenMenuItem2" text="Setting" />
+        <MenuItem id="_IDGenMenuItem3" text="Logout" />
+
+
+        </Menu>
+        </menu>
+
+        
+        
+        </MenuButton>
+     <Image id="image3" src="My_images/line.png" height="50px" width="10px"/>
+     <Button id="_IDGenBut2" icon="My_images/user.png" tooltip="Employee Profile" press="onPress" />
     </contentRight>
     </Bar>
     </customHeader>
@@ -30,6 +46,10 @@
 
 
         <content>
+        <f2:SidePanel id="_IDGenSidePanel1" sidePanelResizable="true" sidePanelPosition="Left">
+        
+
+        </f2:SidePanel>
             <l:VerticalLayout id="IDGenVerticalLayout1" class="centerContent">
                 <f:SimpleForm id="IDGenSimpleForm1" layout="ResponsiveGridLayout">
                     <unified:Calendar
@@ -67,7 +87,7 @@
        
         </HBox>
 
-         <!-- <Bar id="_IDGenBar2">
+        <!-- <Bar id="_IDGenBar2">
         <contentRight>
         <Image id="_IDGenImage678" src="My_images/hcl.svg" />
         </contentRight>

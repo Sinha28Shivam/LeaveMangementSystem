@@ -1,0 +1,11 @@
+<mvc:View controllerName="leavemgmtsyst.controller.profileView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="hello">
+        <content>
+        <Text id="_IDGenText1" text="Hello"/>
+         <!-- <Button id="_IDGenButton1" text="Hello" type="Success" press="onPress"/> -->
+        
+        </content>
+    </Page>
+</mvc:View>

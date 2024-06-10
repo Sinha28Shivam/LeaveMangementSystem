@@ -84,7 +84,15 @@
           "target": [
             "TargetView1"
           ]
+        },
+        {
+          "name" : "RouteprofileView",
+          "pattern" : "profileView",
+          "target" : [
+            "TargetDetail"
+          ]
         }
+
       ],
       "targets": {
         "TargetView1": {
@@ -93,6 +101,13 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "TargetDetail" : {
+          "viewType": "XML",
+          "transition" : "slide",
+          "clearControlAggregation": false,
+          "viewId": "profileView",
+          "viewName": "profileView"
         }
       }
     },
