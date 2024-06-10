@@ -46,13 +46,121 @@
 
 
         <content>
-        <f2:SidePanel id="_IDGenSidePanel1" sidePanelResizable="true" sidePanelPosition="Left">
-        
 
-        </f2:SidePanel>
+
+<!-- this is for side panel -->
+ <Panel id="pnl1" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+             <content>
+               <HBox id="pnl1hbox">
+                 <items>
+                  <Image id="pnl1iimg" src="/images/icons8-island-on-water-48.png"></Image>
+                  <VBox id="pnl1vbox1" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl1txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl1txt2" text="AVAILABLE" class="text2"></Text>
+                   </items>
+                   <layoutData>
+                     <FlexItemData id="flxitmdata1" styleClass="sapUiMediumMarginEnd"></FlexItemData>
+                   </layoutData>
+                  </VBox>
+                 
+                  <VBox id="pnl1vbox2" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl1txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl1txt4" text="AVAILED" class="text2"></Text>
+                   </items>
+                  </VBox>
+                 
+                 </items>
+               </HBox>
+             </content>
+             </Panel>
+ <Panel id="pnl2" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+             <content>
+               <HBox id="pnl2hbox">
+                 <items>
+                  <Image id="pnl2iimg" src="/My_images/island.png"></Image>
+                  <VBox id="pnl2vbox2" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl2txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl2txt2" text="AVAILABLE" class="text2"></Text>
+                   </items>
+                   <layoutData>
+                     <FlexItemData id="flxitmdata2" styleClass="sapUiMediumMarginEnd"></FlexItemData>
+                   </layoutData>
+                  </VBox>
+                 
+                  <VBox id="pnl21vbox2" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl2txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl2txt4" text="AVAILED" class="text2"></Text>
+                   </items>
+                  </VBox>
+                 
+                 </items>
+               </HBox>
+             </content>
+             </Panel>
+ <Panel id="pnl3" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+             <content>
+               <HBox id="pnl3hbox">
+                 <items>
+                  <Image id="pnl3iimg" src="/images/icons8-island-on-water-48.png"></Image>
+                  <VBox id="pnl3vbox1" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl3txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl3txt2" text="AVAILABLE" class="text2"></Text>
+                   </items>
+                   <layoutData>
+                     <FlexItemData id="flxitmdata3" styleClass="sapUiMediumMarginEnd"></FlexItemData>
+                   </layoutData>
+                  </VBox>
+                 
+                  <VBox id="pnl1vbox3" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl3txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl3txt4" text="AVAILED" class="text2"></Text>
+                   </items>
+                  </VBox>
+                 
+                 </items>
+               </HBox>
+             </content>
+             </Panel>
+ <Panel id="pnl4" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+             <content>
+               <HBox id="pnl4hbox">
+                 <items>
+                  <Image id="pnl4iimg" src="/My_images/island.png"></Image>
+                  <VBox id="pnl4vbox2" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl4txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl4txt2" text="AVAILABLE" class="text2"></Text>
+                   </items>
+                   <layoutData>
+                     <FlexItemData id="flxitmdata4" styleClass="sapUiMediumMarginEnd"></FlexItemData>
+                   </layoutData>
+                  </VBox>
+                 
+                  <VBox id="pnl41vbox2" height="100%" class="panelVbox1" >
+                   <items>
+                     <Text id="pnl4txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl4txt4" text="AVAILED" class="text2"></Text>
+                   </items>
+                  </VBox>
+                 
+                 </items>
+               </HBox>
+             </content>
+             </Panel>
+      
+
+
+
+<!-- This is for calender -->
             <l:VerticalLayout id="IDGenVerticalLayout1" class="centerContent">
                 <f:SimpleForm id="IDGenSimpleForm1" layout="ResponsiveGridLayout">
-                    <unified:Calendar
+               <unified:Calendar
                         id="calendar"
                         showWeekNumbers="true"
                         select="handleSelect">
@@ -67,15 +175,6 @@
                
             </l:VerticalLayout>
         </content>
-
-
-
-
-
-
-
-
-
 
         <!-- This is a footer part -->
          <footer>
