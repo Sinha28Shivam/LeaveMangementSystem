@@ -10,8 +10,10 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("leavemgmtsyst.controller.View1", {
-            handleSelect: function (oEvent) {
-                // Handle calendar date selection if needed
+            onInit : function () {
+                // var ojsonModel =  new sap.ui.model.json.JSONModel();
+                // ojsonModel.loadData("model/leaveData.json");
+                // this.getView().setModel(ojsonModel);
             },
 
             onSubmitLeave: function () {

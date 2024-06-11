@@ -44,16 +44,14 @@
 
 
 
-
-        <content>
-
-
+<content>
 <!-- this is for side panel -->
+
  <Panel id="pnl1" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
              <content>
                <HBox id="pnl1hbox">
                  <items>
-                  <Image id="pnl1iimg" src="/images/icons8-island-on-water-48.png"></Image>
+                  <Image id="pnl1iimg" src="/My_images/island.png"></Image>
                   <VBox id="pnl1vbox1" height="100%" class="panelVbox1" >
                    <items>
                      <Text id="pnl1txt1" text="28.50" class="text2"></Text>
@@ -75,11 +73,11 @@
                </HBox>
              </content>
              </Panel>
- <Panel id="pnl2" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+ <Panel id="pnl2" headerText="Compensatory Leave"  height="25%" width="25%" class="classPanel">
              <content>
                <HBox id="pnl2hbox">
                  <items>
-                  <Image id="pnl2iimg" src="/My_images/island.png"></Image>
+                  <Image id="pnl2iimg" src="/My_images/snow.png"></Image>
                   <VBox id="pnl2vbox2" height="100%" class="panelVbox1" >
                    <items>
                      <Text id="pnl2txt1" text="28.50" class="text2"></Text>
@@ -101,11 +99,11 @@
                </HBox>
              </content>
              </Panel>
- <Panel id="pnl3" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+ <Panel id="pnl3" headerText="My Leave"  height="25%" width="25%" class="classPanel">
              <content>
                <HBox id="pnl3hbox">
                  <items>
-                  <Image id="pnl3iimg" src="/images/icons8-island-on-water-48.png"></Image>
+                  <Image id="pnl3iimg" src="/My_images/user2.png"></Image>
                   <VBox id="pnl3vbox1" height="100%" class="panelVbox1" >
                    <items>
                      <Text id="pnl3txt1" text="28.50" class="text2"></Text>
@@ -127,7 +125,7 @@
                </HBox>
              </content>
              </Panel>
- <Panel id="pnl4" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+ <Panel id="pnl4" headerText="Restricted Leave"  height="25%" width="25%" class="classPanel">
              <content>
                <HBox id="pnl4hbox">
                  <items>
@@ -163,11 +161,9 @@
                <unified:Calendar
                         id="calendar"
                         showWeekNumbers="true"
-                        select="handleSelect">
+                        select="handleSelect" intervalSelection="true">
                         <unified:selectedDates>
-                            <unified:DateRange id="_IDGenDateRange1" 
-                            startDate="{path: '/startDate', type: 'sap.ui.model.type.Date'}" 
-                            endDate="{path: '/endDate', type: 'sap.ui.model.type.Date'}" />
+                            <unified:DateRange id="_IDGenDateRange1" />
                         </unified:selectedDates>
                     </unified:Calendar>
                 </f:SimpleForm>
@@ -175,7 +171,6 @@
                
             </l:VerticalLayout>
         </content>
-
         <!-- This is a footer part -->
          <footer>
         <Toolbar id="_IDGenToolbar1" height="50px" style="Standard">
