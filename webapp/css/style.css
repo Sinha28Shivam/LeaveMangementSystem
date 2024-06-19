@@ -22,16 +22,24 @@
     border-left: 0.5px solid rgba(255, 255, 255, 0.6);
 }
 
-.centerContent{
-        /* display: flex; */
-    /* justify-content: center; */
+.centerContent {
+    display: flex;
     align-items: center;
-    height: -24%;
-    width: 51%;
-    flex-direction: column;
-    margin-top: 11px;
-    margin-left: 396px;
-    
+    height: -19%;
+    width: 115%;
+    flex-direction: column-reverse;
+    margin-top: 39px;
+    margin-left: 408px;
+    flex-wrap: wrap;
+}
+.sapUiSizeCompact .sapMBtnInner.sapMBtnText {
+    padding-left: 0.4375rem;
+    padding-right: 0.4375rem;
+    margin-top: -234px;
+}
+.btn{
+    background-color: rgb(211, 242, 253);
+    color: black;
 }
 
 .CustomIcon{
@@ -57,7 +65,7 @@
 }
 .text1{
         color: black;
-        font-size: x-large;
+        font-size: large;
 }
 .text2{
     color: black;
@@ -70,18 +78,14 @@
 .classPanel {
         /* width: 23%; */
         /* height: 121px; */
-        margin-top: 10px;
+        margin-top: 18px;
         border: 1px solid #e4e2e2;
         background: #ecebeb;
-        border-radius: 3px;
-        padding: 6px 5px 0 5px;
+        border-radius: 19px;
+        padding: 2px -1px 32px 41px;
         box-sizing: border-box;
         overflow: hidden !important;
 }
-/* .sapMPanelContent {
-    padding: 1.625rem 0rem;
-}
-  */
 .panelVbox1 {
    margin-right: 10px;
    background-color:white;
@@ -129,4 +133,19 @@
     font-size: 3.5rem;
     text-align: center;
     padding: 21px 0;
+}
+
+.sapMPage>section {
+    position: absolute;
+    overflow-y: hidden;
+    top: 0;
+    left: -552px;
+    right: -23px;
+    bottom: 0;
+}
+.sapMPanelContent {
+    padding: 0.625rem 1rem 1.375rem 1rem;
+    box-sizing: border-box;
+    /* overflow: auto; */
+    white-space: normal;
 }

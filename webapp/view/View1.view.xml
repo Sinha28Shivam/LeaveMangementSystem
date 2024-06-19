@@ -45,9 +45,9 @@
 
 
 <content>
-<!-- this is for side panel -->
-
- <Panel id="pnl1" headerText="Annual Leave"  height="25%" width="25%" class="classPanel">
+<HBox id="_IDGenHBox3" width="100%" >
+<VBox id="_IDGenVBox1" width="25%">
+ <Panel id="pnl1" headerText="Annual Leave"  class="classPanel">
              <content>
                <HBox id="pnl1hbox">
                  <items>
@@ -73,7 +73,7 @@
                </HBox>
              </content>
              </Panel>
- <Panel id="pnl2" headerText="Compensatory Leave"  height="25%" width="25%" class="classPanel">
+ <Panel id="pnl2" headerText="Compensatory Leave" class="classPanel">
              <content>
                <HBox id="pnl2hbox">
                  <items>
@@ -99,7 +99,7 @@
                </HBox>
              </content>
              </Panel>
- <Panel id="pnl3" headerText="My Leave"  height="25%" width="25%" class="classPanel">
+ <Panel id="pnl3" headerText="My Leave" class="classPanel">
              <content>
                <HBox id="pnl3hbox">
                  <items>
@@ -125,7 +125,7 @@
                </HBox>
              </content>
              </Panel>
- <Panel id="pnl4" headerText="Restricted Leave"  height="25%" width="25%" class="classPanel">
+ <Panel id="pnl4" headerText="Restricted Leave" class="classPanel">
              <content>
                <HBox id="pnl4hbox">
                  <items>
@@ -151,13 +151,11 @@
                </HBox>
              </content>
              </Panel>
-      
-
-
 
 <!-- This is for calender -->
-            <l:VerticalLayout id="IDGenVerticalLayout1" class="centerContent">
-                <f:SimpleForm id="IDGenSimpleForm1" layout="ResponsiveGridLayout">
+<VBox id="_IDGenVBox2" width="50%">
+            <l:VerticalLayout id="IDGenVerticalLayout1" class="centerContent" >
+                <f:SimpleForm id="IDGenSimpleForm1" layout="ResponsiveGridLayout"> 
                <unified:Calendar
                         id="calendar"
                         showWeekNumbers="true"
@@ -167,10 +165,25 @@
                         </unified:selectedDates>
                     </unified:Calendar>
                 </f:SimpleForm>
-                <Button id="IDGenButton1" text="Apply" press="onSubmitLeave" />
+                <Button id="IDGenButton1" text="Apply" press="onSubmitLeave" class="btntxt" />
                
             </l:VerticalLayout>
+
+<!-- <VBox id="_IDGenVBox3" width="25%">
+<StandardListItem id="_IDGenStandardListItem1" >
+
+
+</StandardListItem>
+</VBox> -->
+            </VBox>
+            </VBox>
+              </HBox>
+
         </content>
+      
+
+
+
         <!-- This is a footer part -->
          <footer>
         <Toolbar id="_IDGenToolbar1" height="50px" style="Standard">
