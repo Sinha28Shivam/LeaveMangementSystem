@@ -1,19 +1,19 @@
 {
     "leaveData": {
         
-      "Annual Leave": {
-        "available": 20,
+      "AnnualLeave": {
+        "available": 28,
         "availed": 5
       },
-      "Compensatory Leave": {
+      "CompensatoryLeave": {
         "available": 10,
         "availed": 2
       },
-      "My Leave": {
+      "MyLeave": {
         "available": 15,
         "availed": 4
       },
-      "Restricted Leave": {
+      "RestrictedLeave": {
         "available": 8,
         "availed": 3
       }

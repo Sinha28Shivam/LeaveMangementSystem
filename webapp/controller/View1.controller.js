@@ -14,7 +14,12 @@ sap.ui.define([
                 var leaveData = new sap.ui.model.json.JSONModel();
                 leaveData.loadData("model/leaveData.json");
                 this.getView().setModel(leaveData, "lD");
+
+                var oData = new sap.ui.model.json.JSONModel();
+              oData.loadData("model/holidays.json");
+              this.getView().setModel(oData,"holidays");
             },
+            
 
             onSubmitLeave: function () {
                 var oView = this.getView();

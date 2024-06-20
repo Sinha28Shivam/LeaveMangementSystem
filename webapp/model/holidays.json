@@ -1,0 +1,69 @@
+{
+    "holidays": [
+        {
+            "name": "New Year's Day",
+            "day": "Monday",
+            "date": "01-01-24"
+        },
+        {
+            "name": "Republic Day",
+            "day": "Friday",
+            "date": "26-01-24"
+        },
+        {
+            "name": "Holi",
+            "day": "Monday",
+            "date": "25-03-24"
+        },
+        {
+            "name": "Good Friday",
+            "day": "Friday",
+            "date": "29-03-24"
+        },
+        {
+            "name": "Dr. Ambedkar Jayanti",
+            "day": "Sunday",
+            "date": "14-04-24"
+        },
+        {
+            "name": "May Day",
+            "day": "Wednesday",
+            "date": "01-05-24"
+        },
+        {
+            "name": "Independence Day",
+            "day": "Thursday",
+            "date": "15-08-24"
+        },
+        {
+            "name": "Raksha Bandhan",
+            "day": "Monday",
+            "date": "19-08-24"
+        },
+        {
+            "name": "Janmashtami",
+            "day": "Monday",
+            "date": "26-08-24"
+        },
+        {
+            "name": "Gandhi Jayanti",
+            "day": "Wednesday",
+            "date": "02-10-24"
+        },
+        {
+            "name": "Dussehra",
+            "day": "Sunday",
+            "date": "13-10-24"
+        },
+        {
+            "name": "Diwali",
+            "day": "Friday",
+            "date": "01-11-24"
+        },
+        {
+            "name": "Christmas",
+            "day": "Wednesday",
+            "date": "25-12-24"
+        }
+    ]
+}

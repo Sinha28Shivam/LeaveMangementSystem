@@ -47,6 +47,7 @@
 <content>
 <HBox id="_IDGenHBox3" width="100%" >
 <VBox id="_IDGenVBox1" width="25%">
+
  <Panel id="pnl1" headerText="Annual Leave"  class="classPanel">
              <content>
                <HBox id="pnl1hbox">
@@ -54,7 +55,7 @@
                   <Image id="pnl1iimg" src="/My_images/island.png"></Image>
                   <VBox id="pnl1vbox1" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl1txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl1txt1" text="{lD>/leaveData/AnnualLeave/available}.00" class="text2"></Text>
                      <Text id="pnl1txt2" text="AVAILABLE" class="text2"></Text>
                    </items>
                    <layoutData>
@@ -64,7 +65,7 @@
                  
                   <VBox id="pnl1vbox2" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl1txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl1txt3" text="{lD>/leaveData/AnnualLeave/availed}.00" class="text2"></Text>
                      <Text id="pnl1txt4" text="AVAILED" class="text2"></Text>
                    </items>
                   </VBox>
@@ -80,7 +81,7 @@
                   <Image id="pnl2iimg" src="/My_images/snow.png"></Image>
                   <VBox id="pnl2vbox2" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl2txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl2txt1" text="{lD>/leaveData/CompensatoryLeave/available}.00" class="text2"></Text>
                      <Text id="pnl2txt2" text="AVAILABLE" class="text2"></Text>
                    </items>
                    <layoutData>
@@ -90,7 +91,7 @@
                  
                   <VBox id="pnl21vbox2" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl2txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl2txt3" text="{lD>/leaveData/CompensatoryLeave/availed}.00" class="text2"></Text>
                      <Text id="pnl2txt4" text="AVAILED" class="text2"></Text>
                    </items>
                   </VBox>
@@ -106,7 +107,7 @@
                   <Image id="pnl3iimg" src="/My_images/user2.png"></Image>
                   <VBox id="pnl3vbox1" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl3txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl3txt1" text="{lD>/leaveData/MyLeave/available}.00" class="text2"></Text>
                      <Text id="pnl3txt2" text="AVAILABLE" class="text2"></Text>
                    </items>
                    <layoutData>
@@ -116,7 +117,7 @@
                  
                   <VBox id="pnl1vbox3" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl3txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl3txt3" text="{lD>/leaveData/MyLeave/availed}.00" class="text2"></Text>
                      <Text id="pnl3txt4" text="AVAILED" class="text2"></Text>
                    </items>
                   </VBox>
@@ -132,7 +133,7 @@
                   <Image id="pnl4iimg" src="/My_images/island.png"></Image>
                   <VBox id="pnl4vbox2" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl4txt1" text="28.50" class="text2"></Text>
+                     <Text id="pnl4txt1" text="{lD>/leaveData/RestrictedLeave/available}.00" class="text2"></Text>
                      <Text id="pnl4txt2" text="AVAILABLE" class="text2"></Text>
                    </items>
                    <layoutData>
@@ -142,7 +143,7 @@
                  
                   <VBox id="pnl41vbox2" height="100%" class="panelVbox1" >
                    <items>
-                     <Text id="pnl4txt3" text="0.00" class="text2"></Text>
+                     <Text id="pnl4txt3" text="{lD>/leaveData/RestrictedLeave/availed}.00" class="text2"></Text>
                      <Text id="pnl4txt4" text="AVAILED" class="text2"></Text>
                    </items>
                   </VBox>
@@ -151,32 +152,25 @@
                </HBox>
              </content>
              </Panel>
-
+</VBox>
 <!-- This is for calender -->
 <VBox id="_IDGenVBox2" width="50%">
-            <l:VerticalLayout id="IDGenVerticalLayout1" class="centerContent" >
-                <f:SimpleForm id="IDGenSimpleForm1" layout="ResponsiveGridLayout"> 
-               <unified:Calendar
-                        id="calendar"
-                        showWeekNumbers="true"
-                        select="handleSelect" intervalSelection="true">
-                        <unified:selectedDates>
-                            <unified:DateRange id="_IDGenDateRange1" />
-                        </unified:selectedDates>
-                    </unified:Calendar>
-                </f:SimpleForm>
-                <Button id="IDGenButton1" text="Apply" press="onSubmitLeave" class="btntxt" />
-               
-            </l:VerticalLayout>
-
-<!-- <VBox id="_IDGenVBox3" width="25%">
-<StandardListItem id="_IDGenStandardListItem1" >
-
-
-</StandardListItem>
-</VBox> -->
-            </VBox>
-            </VBox>
+               <unified:Calendar id="calendar" showWeekNumbers="true" select="handleSelect" intervalSelection="true" />
+                <Button id="IDGenButton1" text="Apply" press="onSubmitLeave" />
+ </VBox>
+<VBox id="_IDGenVBox3" width="25%">
+<ScrollContainer id="scroll_id" width="100%" height="500px" vertical="true">
+          <List id="id_lst" headerText="Holidays" items="{holidays>/holidays}" width="100%" >
+           <items>
+           <StandardListItem id="id_strdLst" title="{holidays>name}" description="{holidays>day} - {holidays>date}">
+           
+           </StandardListItem>
+           </items>
+          </List>
+          </ScrollContainer>
+</VBox>
+           
+            
               </HBox>
 
         </content>
