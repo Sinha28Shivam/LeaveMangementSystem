@@ -1,16 +1,21 @@
 {
-    "product": [
-        {
-            "ProductID": 1,
-            "ProductName": "Chai",
-            "SupplierID": 1,
-            "CategoryID": 1,
-            "QuantityPerUnit": "10 boxes x 20 bags",
-            "UnitPrice": "18.0000",
-            "UnitsInStock": 39,
-            "UnitsOnOrder": 0,
-            "ReorderLevel": 10,
-            "Discontinued": false
-        }
-    ]
-}
+    "leaveData": {
+        
+      "Annual Leave": {
+        "available": 20,
+        "availed": 5
+      },
+      "Compensatory Leave": {
+        "available": 10,
+        "availed": 2
+      },
+      "My Leave": {
+        "available": 15,
+        "availed": 4
+      },
+      "Restricted Leave": {
+        "available": 8,
+        "availed": 3
+      }
+    }
+  }

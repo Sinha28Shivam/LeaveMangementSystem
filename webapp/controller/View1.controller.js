@@ -11,9 +11,9 @@ sap.ui.define([
 
         return Controller.extend("leavemgmtsyst.controller.View1", {
             onInit : function () {
-                // var ojsonModel =  new sap.ui.model.json.JSONModel();
-                // ojsonModel.loadData("model/leaveData.json");
-                // this.getView().setModel(ojsonModel);
+                var leaveData = new sap.ui.model.json.JSONModel();
+                leaveData.loadData("model/leaveData.json");
+                this.getView().setModel(leaveData, "lD");
             },
 
             onSubmitLeave: function () {
